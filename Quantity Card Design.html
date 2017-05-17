@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <link href="main.css" rel="stylesheet"/>
+        <script src="jquery-1.10.2.min.js"></script>
+        <script>
+            $(document).ready(function(){
+               $count=0;
+                $("#leftarrow").click(function(){
+                   if($count>0)
+                       {
+                           $count--;
+                           $("#counter").text($count);
+                       }
+                });
+                $("#leftarrow").mousedown(function(){
+                   $("#leftarrow").css("BoxShadow","0px 0px 0px gray"); 
+                });
+                $("#leftarrow").mouseup(function(){
+                    $("#leftarrow").css("BoxShadow","0px 2px 1px gray");
+                });
+                $("#rightarrow").click(function(){
+                   if($count<10)
+                       {
+                           $count++;
+                           $("#counter").text($count);
+                       }
+                });
+                $("#rightarrow").mousedown(function(){
+                   $("#rightarrow").css("BoxShadow","0px 0px 0px gray"); 
+                });
+                $("#rightarrow").mouseup(function(){
+                    $("#rightarrow").css("BoxShadow","0px 2px 1px gray");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="title">T-SHIRT</div>
+            <div id="image">
+                <img src="T-shirt.png" height="100%" width="100%"/>
+            </div>
+            <div id="quantity">QUANTITY</div>
+            <div id="clicker">
+                <div id="leftarrow">&#9668;</div>
+                <div id="counter">0</div>
+                <div id="rightarrow">&#9658;</div>
+            </div>
+        </div>
+    </body>
+</html>
